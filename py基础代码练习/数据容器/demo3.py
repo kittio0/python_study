@@ -1,5 +1,6 @@
 # 数据容器：字符串（str）学习笔记
 
+
 s="abcdefg-abab"
 
 print(s)
