@@ -2,7 +2,6 @@ import requests
 
 from get import get_city_id, get_weather
 
-
 url = "https://api.deepseek.com/v1/chat/completions"
 key = "sk-*******"
 
