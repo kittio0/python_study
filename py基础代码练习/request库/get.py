@@ -11,7 +11,7 @@ def get_city_id():
     """获取城市ID"""
     position=input("请输入城市名称：")
     params={
-        "key":"****",
+        "key":"*****",
         "location":position
     }
     try:
@@ -46,7 +46,7 @@ def get_city_id():
 def get_weather(city_id):
     """获取天气信息"""
     params={
-        "key":"***",
+        "key":"*****",
         "location":city_id
     }
     try:
@@ -62,7 +62,7 @@ def get_weather(city_id):
         print(f"体感温度：{now['feelsLike']}℃")
         print(f"天气：{now['text']}")
         print(f"风向：{now['windDir']}")
-        return re
+        return re['now']
     except requests.exceptions.ConnectTimeout:
         print("连接超时")
     except requests.exceptions.Timeout:
@@ -84,7 +84,7 @@ if __name__ == "__main__":
         city_id, flag = get_city_id()
         print(city_id)
         if flag == 1:
-            get_weather(city_id)
+            weather = get_weather(city_id)
         else:
             print("没有找到城市")
     except KeyboardInterrupt:
