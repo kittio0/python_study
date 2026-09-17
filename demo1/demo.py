@@ -53,7 +53,7 @@ def get_weather(id):
         }
     params = {
         "location": id,
-        "key": "26ebe1c8a9aa4fd5a9a359d6e3c29349"
+        "key": "***** "
         }
 
     try:
