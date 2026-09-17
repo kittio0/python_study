@@ -24,6 +24,7 @@ def get_city_id():
     Returns:
         tuple: (城市 ID, 状态标志)。成功为 (str, 1)，失败为 (None, 0)
     """
+
     city=input("请输入城市名称：")
     headers = {
         "Content-Type": "application/json"
@@ -74,6 +75,7 @@ def get_weather(id):
     Returns:
         dict | None: 查到了返回天气字典（里面有温度、天气状况这些），没查到返回 None
     """
+
     headers = {
         "Content-Type": "application/json"
         }
@@ -115,6 +117,7 @@ def suggest_weather(weather):
     Args:
         weather (dict): 实时天气数据，由 get_weather() 返回
     """
+
     headers = {
         "Authorization": f"Bearer {key}",
         "Content-Type": "application/json"
@@ -173,7 +176,7 @@ def suggest_weather(weather):
         print("请求超时")
     except requests.exceptions.HTTPError as e:
         # 4xx 的原因写在响应体里（密钥错误、模型名错误等），截断后打印便于定位
-        print(f"HTTP错误,状态码:{e.response.status_code}", e.response.text[:200])
+        print(f"HTTP错误,状态码:{e.response.status_code}")
     except requests.exceptions.ConnectionError as e:
         print("连接/读取错误：", e)
     except requests.exceptions.RequestException as e:
