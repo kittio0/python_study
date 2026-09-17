@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# 旧 demo1 独立仓库的备份（不再需要，可手动删除）
+demo1/.git_backup/
