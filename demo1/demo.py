@@ -11,7 +11,7 @@
 import requests
 
 url = "https://api.deepseek.com/v1/chat/completions"
-key = "******"
+key = "sk-09b99bbb4564414f90e102eaa4dbe0b6"
 
 host = "k66r738e2p.re.qweatherapi.com"
 city_url = f"https://{host}/geo/v2/city/lookup"
@@ -31,7 +31,7 @@ def get_city_id():
         }
     params = {
         "location": city,
-        "key": "******"  # 和风天气的密钥
+        "key": "26ebe1c8a9aa4fd5a9a359d6e3c29349"  # 和风天气的密钥
         }
 
     try:
@@ -81,7 +81,7 @@ def get_weather(id):
         }
     params = {
         "location": id,
-        "key": "*****"
+        "key": "26ebe1c8a9aa4fd5a9a359d6e3c29349"
         }
 
     try:
